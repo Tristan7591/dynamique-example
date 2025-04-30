@@ -22,14 +22,14 @@ if (contactForm) {
         console.log('Form submitted:', data);
         
         // Show success message
-        alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+        alert('Merci pour votre demande de devis ! Nous vous contacterons dans les plus brefs délais.');
         this.reset();
     });
 }
 
 // Add animation on scroll
 const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.service-card, .pricing-card');
+    const elements = document.querySelectorAll('.pricing-card, .option-card, .table');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -44,7 +44,7 @@ const animateOnScroll = () => {
 
 // Set initial styles for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.service-card, .pricing-card');
+    const elements = document.querySelectorAll('.pricing-card, .option-card, .table');
     elements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
@@ -79,5 +79,16 @@ window.addEventListener('scroll', () => {
         if (link.getAttribute('href').slice(1) === current) {
             link.classList.add('active');
         }
+    });
+});
+
+// Add hover effect to table rows
+const tableRows = document.querySelectorAll('.table tbody tr');
+tableRows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+        row.style.backgroundColor = 'rgba(52, 152, 219, 0.1)';
+    });
+    row.addEventListener('mouseleave', () => {
+        row.style.backgroundColor = '';
     });
 }); 

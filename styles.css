@@ -43,34 +43,31 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Services Section */
-.services {
+/* Avantages Section */
+.avantages {
     padding: 5rem 0;
     background-color: var(--light-gray);
 }
 
-.service-card {
-    text-align: center;
-    padding: 2rem;
+.table {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    margin-bottom: 2rem;
+    overflow: hidden;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
 }
 
-.service-card i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.table td {
+    vertical-align: middle;
 }
 
-/* Pricing Section */
-.pricing {
+/* Offres Section */
+.offres {
     padding: 5rem 0;
 }
 
@@ -82,6 +79,7 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     margin-bottom: 2rem;
+    height: 100%;
 }
 
 .pricing-card.featured {
@@ -117,12 +115,60 @@ body {
 
 .pricing-card ul li {
     margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+/* Options Section */
+.options {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+}
+
+.option-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.option-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.option-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.option-card ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
 }
 
 /* Contact Section */
 .contact {
     padding: 5rem 0;
-    background-color: var(--light-gray);
 }
 
 .contact-info {
@@ -135,6 +181,25 @@ body {
 .contact-info i {
     color: var(--primary-color);
     margin-right: 0.5rem;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.contact-info ul li:before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
 }
 
 /* Form Styles */
@@ -205,5 +270,9 @@ footer a:hover {
 
     .pricing-card.featured:hover {
         transform: translateY(-5px);
+    }
+
+    .table-responsive {
+        margin: 0 -15px;
     }
 } 
